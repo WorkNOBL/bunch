@@ -1,0 +1,16 @@
+
+.root {
+    display: block;
+}
+
+.date {
+    text-transform: lowercase;
+
+    &:after {
+        content: ' - ';
+    }
+}
+
+.organizer {
+    display: inline;
+}

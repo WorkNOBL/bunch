@@ -1,0 +1,38 @@
+@import 'Libs';
+@import 'Normalize';
+@import 'Body';
+
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px;
+}
+
+.flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    @include font-size(16, 1.2);
+    font-family: f(second, regular);
+    z-index: 99;
+}
+
+.flash-success {
+    composes: flash;
+    background-color: #27b385;
+    color: #fff;
+}
+
+.flash-error {
+    composes: flash;
+    background-color: #fcdcdc;
+    color: #d97e00;
+}

@@ -1,0 +1,14 @@
+@import 'Libs';
+
+.root {
+    @include flex(0 1 auto);
+    padding: 25px 0;
+}
+
+.date {
+    text-transform: lowercase;
+
+    &:after {
+        content: ' - ';
+    }
+}

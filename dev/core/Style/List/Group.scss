@@ -1,0 +1,49 @@
+@import 'Libs';
+
+$per-week-width: 150px;
+
+.root {
+    @include display(flex);
+    @include flex-direction(row);
+    margin-bottom: 20px;
+    padding-top: 16px;
+}
+
+.per-week {
+    @include flex(0 0 $per-week-width);
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    background: #f5f5f5;
+    @include font-size(14, 1);
+    position: relative;
+
+     &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        right: 0;
+        background: #1565c0;
+    }
+}
+
+.events {
+    @include flex(1 1 auto);
+}
+
+:global {
+    $colors-list: #d84315 #c62828 #ff8f00 #2e7d32 #00838f #1565c0 #424242;
+
+    @each $current-color in $colors-list {
+        $i: index($colors-list, $current-color);
+
+        .background--#{$i}x {
+             &:after {
+                background: $current-color;
+            }
+        }
+    }
+}

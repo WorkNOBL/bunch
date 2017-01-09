@@ -1,0 +1,30 @@
+@import 'Libs';
+
+.root {
+    max-width: d(main, width);
+    margin: 0 auto;
+    min-height: 100%;
+    @include display(flex);
+    @include flex-direction(column);
+}
+
+.slogan {
+    padding: 25px;
+    text-align: center;
+}
+
+.title {
+    @include font-size(54, 1.4);
+}
+
+.text {
+    @include font-size(20, 1.4);
+    font-family: f(second, regular);
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}

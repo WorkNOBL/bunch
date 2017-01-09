@@ -1,0 +1,24 @@
+@import 'Libs';
+
+.root {
+    color: c(link, color);
+    background: c(link, background);
+    @include font-size(14, 1);
+    height: d(link, height);
+    line-height: d(link, height);
+    padding: 0 15px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+:global {
+    a.link--active {
+      color: c(link, active, color);
+      background: c(link, active, background);
+      border-radius: 5px 5px 0 0;
+      height: 75px;
+      padding-top: 5px;
+      position: relative;
+      top: 14px;
+    }
+}

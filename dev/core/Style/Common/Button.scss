@@ -1,0 +1,22 @@
+@import 'Libs';
+
+.root {
+    display: block;
+    background: c(button, background);
+    color: c(button, color);
+    padding: 0 20px;
+    height: d(button, height);
+    @include font-size(16, 1);
+    line-height: d(button, height);
+    border-radius: d(button, height) / 2;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: f(second, regular);
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+    &:visited, &:active {
+        color: c(button, color);
+    }
+}

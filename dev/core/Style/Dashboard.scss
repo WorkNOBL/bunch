@@ -1,0 +1,27 @@
+@import 'Libs';
+
+.root {
+    composes: root from './Home';
+}
+
+.links {
+    @include flex(1 1 auto);
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+.email {
+    @include flex(0 1 auto);
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+    text-decoration: underline;
+}
+
+.logout {
+    color: #000;
+    margin-left: 10px;
+}

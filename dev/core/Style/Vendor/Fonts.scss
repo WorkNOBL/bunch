@@ -1,0 +1,10 @@
+$arial: Arial, Helvetica, sans-serif;
+
+$app-fonts: (
+    main: (
+        regular: (-apple-system, ".SFNSText-Regular", $arial)
+    ),
+    second: (
+        regular: ('Montserrat', $arial)
+    )
+);

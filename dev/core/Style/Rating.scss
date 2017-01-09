@@ -1,0 +1,51 @@
+@import 'Libs';
+
+.root {
+    @include flex(1 1 auto);
+    @include display(flex);
+    @include flex-direction(column);
+}
+
+.title {
+    @include font-size(52, 1);
+    letter-spacing: -2px;
+    margin-left: -4px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.text-container {
+    @include display(flex);
+    @include flex-direction(row);
+}
+
+.text {
+    @include flex(1 1 auto);
+}
+
+.domain {
+    @include flex(0 1 auto);
+}
+
+.close {
+    position: absolute;
+    z-index: z(two);
+    top: 30px;
+    right: 20px;
+    color: #000;
+    @include font-size(14, 1);
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+:global {
+    .modal > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        outline: none;
+    }
+}

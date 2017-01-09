@@ -1,0 +1,5 @@
+%div#application.application
+- if @flash
+  - flash = raw(@flash.to_json)
+  %script
+    window.flash = #{flash}

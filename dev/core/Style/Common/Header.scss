@@ -1,0 +1,32 @@
+@import 'Libs';
+
+$logo-width: d(logo, width) / 2;
+$logo-height: d(logo, height) / 2;
+
+.root {
+    @include flex(0 0 $logo-height);
+    @include display(flex);
+    @include flex-direction(row);
+    margin-top: 15px;
+
+    &:before {
+      display: block;
+      content: '';
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      z-index: -1;
+    }
+}
+
+.logo {
+    width: $logo-width;
+    height: $logo-height;
+    background: url(../../Assets/Images/logo.png) no-repeat;
+    background-size: $logo-width $logo-height;
+    @include hide-text;
+    @include flex(0 0 $logo-width);
+}

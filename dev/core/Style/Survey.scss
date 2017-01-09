@@ -1,0 +1,102 @@
+@import 'Libs';
+
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 20px 40px;
+    overflow-y: auto;
+}
+
+.title {
+    composes: title from './Rating';
+    margin-bottom: 15px;
+}
+
+.paragraph {
+    margin: 0;
+}
+
+.text {
+    @include font-size(14, 1.4);
+}
+
+.info {
+    padding: 20px 0 40px;
+
+    @include line {
+        bottom: 10px;
+        right: -40px;
+    }
+}
+
+.options {
+    padding: 20px 0;
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    @include line {
+        bottom: 0;
+        right: -40px;
+    }
+}
+
+.option-container {
+    @include flex(0 0 50%);
+    margin-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.option {
+    display: block;
+    cursor: pointer;
+    line-height: 24px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(24px);
+        border: 2px solid #D3D3D3;
+        border-radius: 2px;
+    }
+}
+
+.option-selected {
+    composes: option;
+
+    &:before {
+        border-color: #84e4c4;
+        background: #84e4c4;
+    }
+}
+
+.note {
+    outline: none;
+    border: 2px solid #D3D3D3;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.footer {
+    margin: 40px 0;
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+.button-container {
+    @include flex(0 1 40%);
+}

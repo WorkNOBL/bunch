@@ -1,0 +1,67 @@
+@include font-face('Montserrat',
+    '../Assets/Fonts/montserrat-regular-webfont', normal, $file-formats: eot woff ttf svg);
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: c(body, background);
+    color: c(body, color);
+    @include font-size(14, 1.6);
+    font-family: f(main, regular);
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: inherit;
+
+    &:before, &:after {
+        box-sizing: inherit;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:visited, &:active, &:link {
+        color: #000;
+    }
+}
+
+input {
+    outline: none;
+}

@@ -1,0 +1,50 @@
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return true;
+}
+
+@function f($fonts...) {
+    @if not map-has-nested-keys($app-fonts, $fonts...) {
+        @warn "No font found for `#{inspect($fonts...)}` in $app-fonts map. Property omitted.";
+    }
+
+    @return map-deep-get($app-fonts, $fonts...);
+}
+
+@function z($layers...) {
+    @if not map-has-nested-keys($app-layers, $layers...) {
+        @warn "No layer found for `#{inspect($layers...)}` in $app-layers map. Property omitted.";
+    }
+
+    @return map-deep-get($app-layers, $layers...);
+}
+
+@function c($colors...) {
+    @if not map-has-nested-keys($app-colors, $colors...) {
+        @warn "No colors found for `#{inspect($colors...)}` in $app-colors map. Property omitted.";
+    }
+
+    @return map-deep-get($app-colors, $colors...);
+}
+
+@function d($dimensions...) {
+    @if not map-has-nested-keys($app-dimensions, $dimensions...) {
+        @warn "No dimension found for `#{inspect($dimensions...)}` in $app-dimensions map. Property omitted.";
+    }
+
+    @return map-deep-get($app-dimensions, $dimensions...);
+}

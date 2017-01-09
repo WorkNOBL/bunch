@@ -1,0 +1,22 @@
+@import 'Libs';
+
+.root {
+    composes: root from './Rating';
+}
+
+.title {
+    composes: title from './Rating';
+}
+
+.text-container {
+    @include display(flex);
+    @include flex-direction(row);
+}
+
+.text {
+    @include flex(1 1 auto);
+}
+
+.domain {
+    @include flex(0 1 auto);
+}

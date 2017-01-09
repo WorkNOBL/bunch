@@ -1,0 +1,23 @@
+$app-colors: (
+    body: (
+        color: #000,
+        background: #84e4c4
+    ),
+    home: (
+        content: (
+            background: #fff
+        )
+    ),
+    button: (
+        background: #000,
+        color: #fff
+    ),
+    link: (
+        color: #000,
+        background: transparent,
+        active: (
+            color: #fff,
+            background: #84e4c4
+        )
+    )
+);

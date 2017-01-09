@@ -1,0 +1,6 @@
+development:
+  client_id: 372538234828-41si6i9ma9l44lo3d25oe9et90bjavtt.apps.googleusercontent.com
+  client_secret: ZFc7f0S3_HH3PBran_JuaUMj
+production:
+  client_id: 662488221683-jftmpmm7urf5t7u1igeg9t4ag0n29668.apps.googleusercontent.com
+  client_secret: v5Jg7bFzkPQ-gOgNe9DX_rNO

@@ -1,0 +1,7 @@
+@import 'Libs';
+
+.root {
+    @include flex(1 1 auto);
+    background: c(home, content, background);
+    position: relative;
+}

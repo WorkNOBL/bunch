@@ -1,0 +1,103 @@
+@import 'Libs';
+
+$emotion-size: 84px / 2;
+
+.emotion {
+    display: inline-block;
+    @include flex(0 0 $emotion-size);
+    @include size($emotion-size);
+    background-size: $emotion-size $emotion-size;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    @include transition(background-color .3s ease);
+    cursor: pointer;
+}
+
+.sad {
+    composes: emotion;
+    background-image: url(../../Assets/Images/sad.png);
+    background-color: #ffeef0;
+
+    &:hover {
+        background-color: #ffbcc4;
+    }
+}
+
+.neutral {
+    composes: emotion;
+    background-image: url(../../Assets/Images/neutral.png);
+    background-color: #fdf9c6;
+
+    &:hover {
+        background-color: #f8e71c;
+    }
+}
+
+.happy {
+    composes: emotion;
+    background-image: url(../../Assets/Images/happy.png);
+    background-color: #c9ece0;
+
+    &:hover  {
+        background-color: #28b385;
+    }
+}
+
+.selected-happy {
+    composes: happy;
+    background-color: #28b385;
+}
+
+.selected-neutral {
+    composes: neutral;
+    background-color: #f8e71c;
+}
+
+.selected-sad {
+    composes: sad;
+    background-color: #ffbcc4;
+}
+
+.any-happy {
+    composes: happy;
+    background-color: transparent;
+}
+
+.any-neutral {
+    composes: neutral;
+    background-color: transparent;
+}
+
+.any-sad {
+    composes: sad;
+    background-color: transparent;
+}
+
+.small {
+    composes: emotion;
+    @include size($emotion-size / 2)
+    background-size: $emotion-size / 2 $emotion-size / 2;
+    margin: 0 8px;
+    cursor: default;
+    position: relative;
+    top: 4px;
+}
+
+.small-happy {
+    composes: happy;
+    composes: small;
+    background-color: #28b385;
+}
+
+.small-neutral {
+    composes: neutral;
+    composes: small;
+    background-color: #f8e71c;
+}
+
+.small-sad {
+    composes: small;
+    composes: sad;
+    background-color: #ffbcc4;
+}
+
